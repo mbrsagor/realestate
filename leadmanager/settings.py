@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'leads',
+    # 3rd party apps
     'rest_framework',
 ]
 
