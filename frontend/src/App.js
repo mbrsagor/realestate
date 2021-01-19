@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { Provider } from "react-redux";
 
-import Header from "./components/layout/Header";
+import Header from "./components/layout/Nav";
 import Dashboard from "./components/leads/Dashboard";
 
 class App extends Component {

@@ -1,0 +1,62 @@
+{
+  "name": "redux-api-middleware",
+  "version": "3.2.1",
+  "description": "Redux middleware for calling an API.",
+  "main": "lib/index.cjs.js",
+  "browser": "lib/index.umd.js",
+  "module": "es/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "babel src --out-dir es && rollup -c",
+    "postbuild": "npm run size",
+    "clean": "rimraf es lib coverage",
+    "test": "cross-env NODE_ENV=test jest src es",
+    "test:build": "cross-env TEST_LIB=true NODE_ENV=test jest src",
+    "cover": "npm test -- --verbose --coverage --collectCoverageFrom \"src/**/*.js\"",
+    "lint": "eslint src",
+    "prepublishOnly": "npm run lint && npm test && npm run clean && npm run build && npm run test:build",
+    "size": "size-limit"
+  },
+  "repository": "agraboso/redux-api-middleware",
+  "homepage": "https://github.com/agraboso/redux-api-middleware",
+  "keywords": [
+    "redux",
+    "api",
+    "middleware",
+    "redux-middleware",
+    "flux"
+  ],
+  "author": {
+    "name": "Alberto Garcia-Raboso",
+    "email": "agraboso@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@size-limit/preset-small-lib": "^4.4.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "coveralls": "^3.0.9",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^23.6.0",
+    "jest-fetch-mock": "^1.7.5",
+    "prettier": "^1.19.1",
+    "rimraf": "^2.7.1",
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "size-limit": "^4.4.0"
+  },
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "es",
+    "lib"
+  ]
+}
