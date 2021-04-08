@@ -1,4 +1,4 @@
-from leads.models.leads import Lead
+from leads.models.lead import Lead
 from rest_framework.serializers import ModelSerializer
 
 
