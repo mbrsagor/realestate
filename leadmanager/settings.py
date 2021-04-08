@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+
 from config.db_config import DATABASES
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
