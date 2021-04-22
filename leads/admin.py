@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from leads.models.book import Book
 from leads.models.lead import Lead
+from leads.models.member import Member
 
 
 class LeadManager(admin.ModelAdmin):
@@ -19,3 +20,5 @@ class BookManager(admin.ModelAdmin):
     list_per_page = 8
 
 admin.site.register(Book, BookManager)
+
+admin.site.register(Member)
