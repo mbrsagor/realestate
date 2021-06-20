@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import LeadUser
+from .models import LeadUser, UserCategory, Position
 
 
 class LeadUserAdmin(UserAdmin):
@@ -12,3 +12,5 @@ class LeadUserAdmin(UserAdmin):
 
 # admin.site.unregister(LeadUser)
 admin.site.register(LeadUser, LeadUserAdmin)
+admin.site.register(Position)
+admin.site.register(UserCategory)
