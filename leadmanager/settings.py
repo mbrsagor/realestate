@@ -17,7 +17,6 @@ from config.db_config import DATABASES
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -28,7 +27,6 @@ SECRET_KEY = 'ge710h@70uvwnez474vfr26=q%!%u&&c2u0nn1(mn9w5r*$52i'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -49,7 +47,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',
 ]
 
-INSTALLED_APPS = DEFAULT_APPS+ LOCAL_APPS +THIRD_PARTY_APPS
+INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -81,7 +79,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'leadmanager.wsgi.application'
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -100,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -114,21 +110,23 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL  = '/static/'
-MEDIA_URL   = '/media/'
-MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
 # Mail using SMTP
-EMAIL_USE_TLS       = True
-EMAIL_HOST          ='smtp.gmail.com'
-EMAIL_HOST_USER     = 'admin@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'admin@gmail.com'
 EMAIL_HOST_PASSWORD = '**********'
-EMAIL_PORT          = 587
+EMAIL_PORT = 587
+
+# Auth user
+AUTH_USER_MODEL = 'lead_auth.LeadUser'
