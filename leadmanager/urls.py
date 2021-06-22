@@ -21,6 +21,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/user/', include('lead_auth.urls')),
 ]
 
 if settings.DEBUG:
