@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from utils.custom_responses import prepare_success_response, prepare_error_response, prepare_create_success_response
-from services.validation_service import validate_position_data
+from lead_auth.services.validation_service import validate_position_data
 from lead_auth.serializers.position_serializer import PositionSerializer
 from lead_auth.models import Position
 
