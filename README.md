@@ -11,6 +11,8 @@ The following steps will walk you thru installation on a Mac. Linux should be si
 - Al least know Django & Django DRF 
 - Database concept
 
+Copy the ``.env-sample`` rename ``.env`` otherwise you can't run the server.
+
 > Open your terminal then, Please following the instructions for running the application in your local server.
 
 ```base
