@@ -46,3 +46,9 @@ class UserCategoryAPIView(APIView):
             return Response(prepare_error_response(serializer.errors), status=status.HTTP_204_NO_CONTENT)
         else:
             return Response(prepare_error_response('No data found for this ID'), status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format=None):
+        user_category = self.get_object(pk)
+        if user_category is not None:
+            return Response(prepare_success_response('Data deleted successfully'), status=status.HTTP_200_OK)
+        return Response(prepare_error_response('Sorry! Content not found'), status=status.HTTP_400_BAD_REQUEST)

@@ -8,4 +8,6 @@ urlpatterns = [
     path('position-delete/<int:pk>/', PositionAPIView.as_view()),
     # User category
     path('user-category/', UserCategoryAPIView.as_view()),
+    path('user-category-update/<int:pk>/', UserCategoryAPIView.as_view()),
+    path('user-category-delete/<int:pk>/', UserCategoryAPIView.as_view()),
 ]
