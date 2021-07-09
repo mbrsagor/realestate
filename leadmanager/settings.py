@@ -45,7 +45,8 @@ DEFAULT_APPS = [
 ]
 
 LOCAL_APPS = [
-    'lead_auth'
+    'lead_auth',
+    'inventory',
 ]
 
 THIRD_PARTY_APPS = [
