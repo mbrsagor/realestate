@@ -12,6 +12,7 @@ class Inventory(BaseEntity):
     discount_price = models.DecimalField(max_digits=12, default=0.00, decimal_places=12)
     stock_from = models.CharField(max_length=120)
     quantity = models.IntegerField(default=0)
+    image = models.ImageField(upload_to='inventory', blank=True, null=True)
 
     def __str__(self):
         return f"{self.id} {self.name}"
