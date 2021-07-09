@@ -8,9 +8,8 @@ class Inventory(BaseEntity):
     name = models.CharField(max_length=120)
     category_name = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='inventory_category')
     tags = models.ManyToManyField(Tag, related_name='inventory_tag')
-    price = models.DecimalField(max_digits=20, default=0.00)
-    sell_price = models.DecimalField(max_digits=20, default=0.00)
-    discount_price = models.DecimalField(max_digits=12, default=0.00)
+    price = models.DecimalField(max_digits=12, default=0.00, decimal_places=12)
+    discount_price = models.DecimalField(max_digits=12, default=0.00, decimal_places=12)
     stock_from = models.CharField(max_length=120)
     quantity = models.IntegerField(default=0)
 
