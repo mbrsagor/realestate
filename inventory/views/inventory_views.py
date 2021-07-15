@@ -33,6 +33,10 @@ class InventoryUpdateDeleteAPIView(APIView):
         except Inventory.DoesNotExist:
             return None
 
+    # Inventory details views
+    def get(self, request, pk, format=None):
+        pass
+
     def put(self, request, pk, format=None):
         validation_error = validation_inventory_data(request.data)
         if validation_error is not None:
