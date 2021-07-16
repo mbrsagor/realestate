@@ -7,3 +7,4 @@ migrations/
 media
 .env
 
+data

@@ -39,3 +39,8 @@ DATABASES = {
     }
 }
 ```
+
+##### If you want to run the project ``docker`` pls follow the instructions:
+```bash
+docker-compose up
+```
