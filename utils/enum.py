@@ -10,3 +10,12 @@ class InventoryTypes(IntEnum):
     @classmethod
     def get_choices(cls):
         return [(key.value, key.name) for key in cls]
+
+
+class StockType(IntEnum):
+    BUY = 0
+    SELL = 1
+
+    @classmethod
+    def select_type(cls):
+        return [(key.value, key.name) for key in cls]
