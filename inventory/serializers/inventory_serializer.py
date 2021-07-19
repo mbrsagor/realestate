@@ -7,5 +7,5 @@ class InventorySerializer(serializers.ModelSerializer):
         model = Inventory
         fields = [
             'id', 'name', 'category_name', 'tags', 'price', 'discount_price', 'stock_from', 'calculate_price',
-            'color', 'types', 'is_available', 'quantity', 'image', 'created_by', 'created_at', 'updated_at'
+            'variant', 'color', 'types', 'is_available', 'quantity', 'image', 'created_by', 'created_at', 'updated_at'
         ]

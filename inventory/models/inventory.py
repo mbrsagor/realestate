@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import JSONField
 from inventory.models.base import BaseEntity
 from inventory.models.category import Category
 from inventory.models.category import Tag
@@ -11,6 +12,7 @@ class Inventory(BaseEntity):
     category_name = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='inventory_category')
     tags = models.ManyToManyField(Tag, related_name='inventory_tag', blank=True)
     color = models.CharField(max_length=30)
+    variant = JSONField(blank=True, null=True, default=None)
     price = models.DecimalField(max_digits=12, default=0.00, decimal_places=12)
     discount_price = models.DecimalField(max_digits=12, default=0.00, decimal_places=12)
     stock_from = models.CharField(max_length=120)
