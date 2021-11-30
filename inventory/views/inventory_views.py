@@ -15,9 +15,9 @@ class InventoryAPIView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request):
-        validation_error = validation_inventory_data(request.data)
-        if validation_error is not None:
-            return Response(prepare_error_response(validation_error), status=status.HTTP_400_BAD_REQUEST)
+        # validation_error = validation_inventory_data(request.data)
+        # if validation_error is not None:
+        #     return Response(prepare_error_response(validation_error), status=status.HTTP_400_BAD_REQUEST)
 
         serializer = InventorySerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):

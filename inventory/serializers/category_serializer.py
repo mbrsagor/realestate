@@ -1,11 +1,5 @@
 from rest_framework import serializers
-from inventory.models.category import Category, Tag
-
-
-class TagSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Tag
-        fields = '__all__'
+from inventory.models.category import Category
 
 
 class CategorySerializer(serializers.ModelSerializer):

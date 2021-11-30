@@ -3,7 +3,7 @@ def validation_inventory_data(attrs):
         return "name field is required"
     elif "category_name" is None:
         return "please must have category name"
-    elif "stock_from" in attrs and len(attrs.get("stock_from")):
+    elif "stock_from" in attrs and len(attrs.get("stock_from")) <= 1:
         return "please must have stock name"
     else:
-        return "Please provide valid options"
+        return True
