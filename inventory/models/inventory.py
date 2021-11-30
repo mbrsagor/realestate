@@ -27,6 +27,3 @@ class Inventory(BaseEntity):
     def calculate_price(self):
         price = int(self.price)
         return self.quantity * price
-
-    def add(self):
-        pass

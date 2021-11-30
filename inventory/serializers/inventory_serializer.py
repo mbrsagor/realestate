@@ -1,8 +1,11 @@
 from rest_framework import serializers
 from inventory.models.inventory import Inventory
+from inventory.serializers.category_serializer import TagSerializer
 
 
 class InventorySerializer(serializers.ModelSerializer):
+    tags = TagSerializer(source="name", read_only=True, many=True)
+
     class Meta:
         model = Inventory
         fields = [
