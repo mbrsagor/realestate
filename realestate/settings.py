@@ -161,6 +161,10 @@ MEDIA_ROOT = BASE_DIR / "mediafiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Auth user model
+AUTH_USER_MODEL = 'users.User'
+
+# Logger start from here.
 logger = logging.getLogger(__name__)
 
 LOG_LEVEL = "INFO"
